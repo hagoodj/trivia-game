@@ -21,7 +21,7 @@ $("#button-start").on("click", startGame);
 
 function startTimer() {
 
-    timer = 1;
+    timer = 15;
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
 
