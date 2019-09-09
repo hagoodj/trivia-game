@@ -9,8 +9,41 @@ body {
 
 .container {
   background-color: white;
-  height: 60vh;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  min-height: 80vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
   padding: 20px;
+  overflow: auto;
 }
+
+#results {
+  background-color: white;
+  position: relative;
+  bottom: 0px;
+}
+
+h1 {
+  color: rgb(236, 81, 221);
+}
+
+.answerButtons1,
+.answerButtons2,
+.answerButtons3,
+.answerButtons4,
+.answerButtons5 {
+  margin: 10px;
+}
+
+#question1,
+#question2,
+#question3,
+#question4,
+#question5,
+#numberCorrect,
+#numberIncorrect,
+#numberUnanswered {
+  font-size: 20px;
+  color: green;
+}
+
+
