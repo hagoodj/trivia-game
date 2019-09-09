@@ -41,6 +41,8 @@ function startTimer() {
 
 function startGame () {
 
+    startTimer();
+
     correct = 0;
     incorrect = 0;
     unanswered = 0;
@@ -52,7 +54,7 @@ function startGame () {
     $('#numberUnanswered').html('');
     $('#button-restart').html('');
 
-    startTimer();
+ 
 
     $('#question1').html("Who is the lead singer?");
     $('#answer1').html("<button class = 'answerButtons1' id = 'a11' value = '0'>Anna</button><button class = 'answerButtons1' id = 'a12' value = '1'>Maddie</button><button class = 'answerButtons1' id = 'a13' value = '2'>Peg</button><button class = 'answerButtons1' id = 'a14' value = '3'>Tess</button>");
