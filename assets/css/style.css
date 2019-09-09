@@ -1,15 +1,16 @@
 body {
-    background-image: 
-      url(../images/background-left.JPG),
-      url(../images/background-right.JPG);
-    background-repeat: repeat-y, repeat-y;
-    background-size: 50% 100%;
-    background-position: left top, right top;
+  background-image: 
+    url(../images/background-left.JPG),
+    url(../images/background-right.JPG);
+  background-repeat: repeat-y, repeat-y;
+  background-size: 50% 100%;
+  background-position: left top, right top;
 }
 
 .container {
-    background-color: white;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    padding: 20px;
+  background-color: white;
+  height: 60vh;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 20px;
 }

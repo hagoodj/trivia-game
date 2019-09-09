@@ -21,7 +21,7 @@ $("#button-start").on("click", startGame);
 
 function startTimer() {
 
-    timer = 10;
+    timer = 5;
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
 
@@ -46,6 +46,10 @@ function startGame () {
     correct = 0;
     incorrect = 0;
     unanswered = 0;
+
+    document.getElementById("container").style.backgroundImage = '';
+    document.getElementById("container").style.backgroundRepeat = ''
+    document.getElementById("container").style.backgroundPosition = ''
 
     $('#button-start').hide();
 
@@ -172,6 +176,7 @@ function startGame () {
 
 function endGame() {
 
+
     unanswered = 5 - (correct+incorrect)
 
     $('#timer').hide();
@@ -190,6 +195,10 @@ function endGame() {
 
     $('#question5').html('');
     $('#answer5').html('');
+
+    document.getElementById("container").style.backgroundImage = "url('../trivia-game/assets/images/band-image.JPG')";
+    document.getElementById("container").style.backgroundRepeat = "no-repeat"
+    document.getElementById("container").style.backgroundPosition = "center"
 
     $('#numberCorrect').html("Correct Answers: " + correct)
     $('#numberIncorrect').html("Incorrect Answers: " + incorrect)
