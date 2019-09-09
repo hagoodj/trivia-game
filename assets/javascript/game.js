@@ -148,8 +148,45 @@ $(document).ready(function () {
         else {
             incorrect++;
         }
+
     })
 
+        answered = correct + incorrect;
+
+        if (answered === 5 || timer <= 0) {
+            endGame ();
+        }
+
+    }
+
+    function endGame() {
+
+        unanswered = 5 - (correct+incorrect)
+    
+        $('#timer').hide();
+    
+        $('#question1').html('');
+        $('#answer1').html('');
+    
+        $('#question2').html('');
+        $('#answer2').html('');
+    
+        $('#question3').html('');
+        $('#answer3').html('');
+    
+        $('#question4').html('');
+        $('#answer4').html('');
+    
+        $('#question5').html('');
+        $('#answer5').html('');
+    
+        $('#numberCorrect').html("Correct Answers: " + correct)
+        $('#numberIncorrect').html("Incorrect Answers: " + incorrect)
+        $('#numberUnanswered').html("Unanswered Questions: " + unanswered)
+    
+        $('#button-restart').html("<button id = 'restart'>Restart</button");
+        $('#restart').on('click', startGame);
+    
     }
 
 });
