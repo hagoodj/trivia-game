@@ -194,7 +194,7 @@ function endGame() {
     $('#question5').html('');
     $('#answer5').html('');
 
-    $('#bandImage').html('<img src = "../trivia-game/assets/images/band-image.JPG">');
+    $('#bandImage').html('<img src = "../trivia-game/assets/images/band-image.jpg">');
 
     $('#numberCorrect').html("Correct Answers: " + correct)
     $('#numberIncorrect').html("Incorrect Answers: " + incorrect)
