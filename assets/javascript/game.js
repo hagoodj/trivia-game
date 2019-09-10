@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+// creating variables to be used in functions
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
@@ -17,8 +18,10 @@ var userGuess4;
 var userSelect5;
 var userGuess5;
 
+// event listener to call startGame function when start button is clicked
 $("#button-start").on("click", startGame);
 
+// timer function
 function startTimer() {
 
     timer = 15;
@@ -27,26 +30,32 @@ function startTimer() {
 
   }
 
+  // decrements timer every second and displays on html
   function decrement() {
 
     timer--;
     $("#timer").show();
     $("#timer").html("Time remaining: " + timer);
 
+    // when timer reaches 0 endGame function is called
     if (timer <= 0) {
       endGame();
     }
 
   }
 
+// function to start timer, clear html, and display questions and answer buttons 
 function startGame () {
 
+    // calls startTimer function
     startTimer();
 
+    // sets variables to 0
     correct = 0;
     incorrect = 0;
     unanswered = 0;
 
+    // clearing html of everything but the questions, answers, and timer
     $('#bandImage').html('');
 
     $('#button-start').hide();
@@ -57,10 +66,11 @@ function startGame () {
     $('#button-restart').html('');
 
  
-
+    // displays question 1 and answer choices
     $('#question1').html("Who is the lead singer?");
     $('#answer1').html("<button class = 'answerButtons1' id = 'a11' value = '0'>Anna</button><button class = 'answerButtons1' id = 'a12' value = '1'>Maddie</button><button class = 'answerButtons1' id = 'a13' value = '2'>Peg</button><button class = 'answerButtons1' id = 'a14' value = '3'>Tess</button>");
     
+    // stores user guess when an answer button is clicked and disables the answer buttons for the corresponding question
     $(".answerButtons1").on("click", function() {
 
           userSelect1 = $(this).attr("value");
@@ -71,6 +81,7 @@ function startGame () {
           $("#a13").attr("disabled", true);
           $("#a14").attr("disabled", true);
          
+          // if user guesses correctly, correct variable increments by one, if user guesses incorrectly, incorrect variable increments by one
           if (userGuess1 === 1) {
               correct++;
           }
@@ -172,8 +183,10 @@ function startGame () {
 
 }
 
+// endGame function removes questions, answer buttons, and time from html 
+// displays results
+// restart button calls startGame function, and the game will repeat
 function endGame() {
-
 
     unanswered = 5 - (correct+incorrect)
 
